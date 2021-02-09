@@ -1,0 +1,132 @@
+.sidebar_container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  height: 100vh;
+  background-color: #2f3135;
+}
+
+.sidebar_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #2f3135;
+  color: #fff;
+  border-bottom: 3px solid #26282c;
+}
+.sidebar_top > .MuiSvgIcon-root {
+  display: none;
+}
+.sidebar_channel {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.sidebar_channel::-webkit-scrollbar {
+  display: none;
+}
+.sidebar_channel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidebar_channel_name {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2f3135;
+  color: gray;
+}
+
+.channel_name {
+  display: flex;
+
+  align-items: center;
+}
+
+.channel_abb_btn {
+  cursor: pointer;
+}
+.channel_abb_btn:hover {
+  color: #fff;
+}
+.sidebar_voice,
+.sidebar_profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 10px;
+  border-top: 3px solid gray;
+}
+.sidebar_voiceInfo,
+.sidebar_profileInfo {
+  flex: 1;
+  padding: 10px;
+}
+.sidebar_voiceInfo > h3 {
+  color: #4fb185;
+}
+.sidebar_voiceInfo > p,
+.sidebar_profileInfo > p {
+  font-size: smaller;
+}
+
+.sidebar_voiceIcon {
+  color: #4fb185;
+}
+.sidebar_voiceIcon > .MuiSvgIcon-root,
+.sidebar_profileIcon > .MuiSvgIcon-root {
+  padding: 10px;
+}
+
+.sidebar_profileInfo > h3 {
+  color: #fff;
+}
+
+.profile_avatar:hover {
+  cursor: pointer;
+}
+.sidebar_channel_name_dropdown {
+  pointer-events: none;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar_container {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    justify-content: space-between;
+    top: 0;
+    box-shadow: 0 0 4px rgb(27, 26, 26);
+    height: 80px;
+  }
+  .sidebar_top,
+  .sidebar_profile {
+    border: none;
+  }
+  .sidebar_profileInfo > h3 {
+    font-size: 16px;
+  }
+
+  .sidebar_profileIcon,
+  .sidebar_voice,
+  .sidebar_channel,
+  .channel_name {
+    display: none;
+  }
+  .sidebar_top > .MuiSvgIcon-root {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+
+    pointer-events: all;
+  }
+  .sidebar_top > .MuiSvgIcon-root:hover {
+    transition: 0.5s transform ease-in-out;
+    transform: scale(1.3);
+  }
+}

@@ -1,0 +1,21 @@
+.message {
+  display: flex;
+  padding: 20px;
+
+  align-items: center;
+  color: #fff;
+}
+.message_info {
+  margin-left: 20px;
+  flex: 1;
+}
+.message_timestamp {
+  color: gray;
+  margin-left: 20px;
+  font-size: x-small;
+}
+.message_icon > .MuiSvgIcon-root:hover {
+  cursor: pointer;
+  transition: 0.3 transform ease-in-out;
+  transform: scale(2);
+}

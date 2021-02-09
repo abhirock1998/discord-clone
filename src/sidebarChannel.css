@@ -1,0 +1,30 @@
+.sidebarChannel:hover > h4 {
+  color: #fff;
+  background-color: #48464b;
+}
+
+.sidebarChannel {
+  overflow: scroll;
+}
+.sidebarChannel::-webkit-scrollbar {
+  display: none;
+}
+.sidebarChannel > h4 {
+  display: flex;
+
+  padding-left: 15px;
+  align-items: center;
+  background-color: #2f3135;
+  color: gray;
+  cursor: pointer;
+}
+.sidebarChannel_hash {
+  font-size: 30px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebarChannel:hover > h4 {
+    background-color: #2f3135;
+  }
+}
